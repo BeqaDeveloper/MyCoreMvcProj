@@ -15,6 +15,7 @@ namespace MyProject.Domain.Interfaces
 
     public interface IForumService : IService<Forum>
     {
+        ICollection<Forum> GetForumWithPostAndUser(long forumId);
     }
     public interface IPostService : IService<Post>
     {
@@ -22,6 +23,4 @@ namespace MyProject.Domain.Interfaces
     public interface IPostReplyService : IService<PostReply>
     {
     }
-   
-
 }

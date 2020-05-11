@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -22,6 +23,9 @@ namespace MyProject.MVC.Models.Forum
 
         [Display(Name = "ImageUrl")]
         public string ImageUrl { get; set; }
+
+        public List<SelectListItem> Posts { get; set; }
+        public List<SelectListItem> User { get; set; }
 
     }
     public class ForumListViewModel

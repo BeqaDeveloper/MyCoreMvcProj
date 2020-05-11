@@ -16,7 +16,7 @@ namespace MyProject.Domain.Interfaces
     }
     public interface IForumRepository : IRepository<Forum>
     {
-
+        List<Forum> GetForumWithPostAndUser(long forumId);
     }
     public interface IPostReplyRepository : IRepository<PostReply>
     {

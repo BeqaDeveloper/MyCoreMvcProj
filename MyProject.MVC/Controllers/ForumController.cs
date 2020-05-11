@@ -28,5 +28,12 @@ namespace MyProject.MVC.Controllers
             _mapper.Map(forumList, forumListViewModel.ForumList);
             return View(forumListViewModel);
         }
+
+
+        public IActionResult Topic(int id)
+        {
+            var topic = _forumService.GetForumWithPostAndUser(id);
+            return View();
+        }
     }
 }

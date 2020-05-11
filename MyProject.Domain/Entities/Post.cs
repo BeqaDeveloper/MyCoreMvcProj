@@ -14,6 +14,6 @@ namespace MyProject.Domain.Entities
         public virtual ApplicationUser User { get; set; }
         public virtual Forum Forum { get; set; }
 
-        public virtual  IEnumerable<PostReply> Replies{ get; set; }
+        public virtual  ICollection<PostReply> Replies{ get; set; }
     }
 }

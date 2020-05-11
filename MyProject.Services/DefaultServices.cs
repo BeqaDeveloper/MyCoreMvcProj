@@ -4,6 +4,7 @@ using MyProject.Domain.Entities;
 using MyProject.Domain.Interfaces;
 using MyProject.Domain.Interfaces.Core;
 using MyProject.Repository.Context;
+using System.Collections.Generic;
 
 namespace MyProject.Services
 {
@@ -16,6 +17,10 @@ namespace MyProject.Services
         public ForumService(IUnitOfWork context, IForumRepository ForumRepository) : base(context, ForumRepository)
         {
             _ForumRepository = ForumRepository;
+        }
+        public ICollection<Forum> GetForumWithPostAndUser(long forumId)
+        {
+            return _ForumRepository.GetForumWithPostAndUser(forumId);
         }
     }
 
