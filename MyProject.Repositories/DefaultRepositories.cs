@@ -4,6 +4,8 @@ using MyProj.Repository.Context;
 using MyProject.Domain.Entities;
 using MyProject.Domain.Interfaces;
 using MyProject.Domain.Interfaces.Core;
+using MyProject.Repository.Context;
+using System.Collections.Generic;
 
 namespace MyProject.Repositories
 {

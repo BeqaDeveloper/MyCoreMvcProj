@@ -8,7 +8,6 @@ namespace MyProject.Repository.Context
 {
     public class MyDbContext : IdentityDbContext<ApplicationUser>, IUnitOfWork
     {
-        #region Unitwork
         public void Commit()
         {
             try
@@ -25,7 +24,6 @@ namespace MyProject.Repository.Context
         {
             throw new NotImplementedException();
         }
-        #endregion
 
 
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
