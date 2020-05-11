@@ -9,8 +9,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MyProject.Repositories.MyContext
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20200511105815_MyProj-0001")]
-    partial class MyProj0001
+    [Migration("20200511180819_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

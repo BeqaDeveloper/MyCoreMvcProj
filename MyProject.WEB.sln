@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProject.Repositories", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProject.Services", "MyProject.Services\MyProject.Services.csproj", "{4F4E1073-C2D2-4F4E-8D26-E3ACC132FCC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProject.MVC", "MyProject.MVC\MyProject.MVC.csproj", "{4BFD00E6-9972-4550-AEEE-A7DBAF16B2D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{4F4E1073-C2D2-4F4E-8D26-E3ACC132FCC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F4E1073-C2D2-4F4E-8D26-E3ACC132FCC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F4E1073-C2D2-4F4E-8D26-E3ACC132FCC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BFD00E6-9972-4550-AEEE-A7DBAF16B2D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BFD00E6-9972-4550-AEEE-A7DBAF16B2D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BFD00E6-9972-4550-AEEE-A7DBAF16B2D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BFD00E6-9972-4550-AEEE-A7DBAF16B2D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{9C065FC7-ECA0-4090-A93D-7A830E04FC58} = {891D6B9E-BF56-4DB7-B5AF-DE3ED90CC7FA}
 		{1729B3AD-51BE-46DE-B3B1-B867B7F7CD50} = {891D6B9E-BF56-4DB7-B5AF-DE3ED90CC7FA}
 		{4F4E1073-C2D2-4F4E-8D26-E3ACC132FCC2} = {891D6B9E-BF56-4DB7-B5AF-DE3ED90CC7FA}
+		{4BFD00E6-9972-4550-AEEE-A7DBAF16B2D3} = {D3F6D7FB-7F6D-4C9C-8C42-E7E54CC9A363}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AAB77FCF-163C-4817-BC2F-E9ECDA743C5B}
