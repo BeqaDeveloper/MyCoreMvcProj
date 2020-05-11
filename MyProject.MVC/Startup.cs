@@ -53,9 +53,9 @@ namespace MyProject.MVC
             #endregion
 
             #region adding dependencies
-            var interfaces = typeof(Test).Assembly.GetTypes().Where(t => t.IsInterface && t != typeof(IUnitOfWork));
+            var interfaces = typeof(Forum).Assembly.GetTypes().Where(t => t.IsInterface && t != typeof(IUnitOfWork));
             //Add Repository Dependencies
-            foreach (var t in typeof(TestRepository).Assembly.GetTypes())
+            foreach (var t in typeof(ForumRepository).Assembly.GetTypes())
             {
                 foreach (var i in interfaces.Where(x => x.IsAssignableFrom(t)))
                 {
@@ -63,7 +63,7 @@ namespace MyProject.MVC
                 }
             }
             //Add Service Dependencies
-            foreach (var s in typeof(TestService).Assembly.GetTypes())
+            foreach (var s in typeof(ForumService).Assembly.GetTypes())
             {
                 foreach (var i in interfaces.Where(x => x.IsAssignableFrom(s)))
                 {

@@ -13,11 +13,9 @@ namespace MyProject.Domain.Interfaces
         void Delete(T entity);
     }
 
-    public interface ITestService : IService<Test>
+    public interface IForumService : IService<Forum>
     {
     }
-    public interface ITest2Service : IService<Test2>
-    {
-    }
+ 
 
 }

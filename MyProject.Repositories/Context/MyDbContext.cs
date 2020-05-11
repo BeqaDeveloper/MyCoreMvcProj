@@ -29,8 +29,7 @@ namespace MyProject.Repository.Context
 
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) { }
 
-        public virtual DbSet<Test> Tests { get; set; }
-        public virtual DbSet<Test2> Test2s { get; set; }
+        public virtual DbSet<Forum> Forums { get; set; }
 
 
     }

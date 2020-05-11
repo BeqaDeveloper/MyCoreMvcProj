@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MyProject.Domain.Entities;
 using MyProject.MVC.Data;
 
 namespace MyProject.MVC.Areas.Identity.Pages.Account.Manage

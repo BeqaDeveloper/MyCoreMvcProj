@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using MyProject.Domain.Entities;
 using MyProject.MVC.Data;
 
 namespace MyProject.MVC.Areas.Identity.Pages.Account

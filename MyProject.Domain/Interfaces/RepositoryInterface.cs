@@ -14,12 +14,9 @@ namespace MyProject.Domain.Interfaces
         void Delete(long id);
         void Delete(T entity);
     }
-    public interface ITestRepository : IRepository<Test>
+    public interface IForumRepository : IRepository<Forum>
     {
 
     }
-    public interface ITest2Repository : IRepository<Test2>
-    {
-
-    }
+  
 }

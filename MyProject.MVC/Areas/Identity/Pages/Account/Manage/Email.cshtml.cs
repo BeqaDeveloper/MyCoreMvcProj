@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using MyProject.MVC.Data;
+using MyProject.Domain.Entities;
 
 namespace MyProject.MVC.Areas.Identity.Pages.Account.Manage
 {

@@ -52,10 +52,7 @@ namespace MyProject.Repository.Context
             _repository.Delete(entity);
             _context.Commit();
         }
-        public interface ITestService : IService<Test>
-        {
-        }
-        public interface ITest2Service : IService<Test2>
+        public interface IForumService : IService<Forum>
         {
         }
     }
