@@ -17,6 +17,7 @@ using MyProject.Domain.Interfaces.Core;
 using MyProject.Domain.Entities;
 using MyProject.Repositories;
 using MyProject.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace MyProject.MVC
 {
@@ -32,7 +33,7 @@ namespace MyProject.MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-          
+
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddRazorPages().AddRazorRuntimeCompilation();
@@ -41,11 +42,14 @@ namespace MyProject.MVC
             services.AddDbContext<MyDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("ApplicationDbContextConnection")));
             services.AddScoped<IUnitOfWork, MyDbContext>();
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(
-                    Configuration.GetConnectionString("ApplicationDbContextConnection")));
-            services.AddDefaultIdentity<ApplicationUser>()
-            .AddRoles<IdentityRole>()
-            .AddEntityFrameworkStores<ApplicationDbContext>();
+                    options.UseNpgsql(
+                        Configuration.GetConnectionString("ApplicationDbContextConnection")));
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                  .AddEntityFrameworkStores<ApplicationDbContext>()
+                  .AddDefaultTokenProviders();
+            services.AddMvc();
+
+
             #endregion
 
             #region adding dependencies

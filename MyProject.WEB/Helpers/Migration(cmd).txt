@@ -1,5 +1,0 @@
-﻿Add-Migration MyProj-0001 -Context MyDbContext -OutputDir "MyContext"
-Script-Migration -Context MyDbContext -From MyProj-0001
-
-Add-Migration InitialCreate -Context ApplicationDbContext -OutputDir "IdentityMigrations"
-Update-Database -Context ApplicationDbContext
