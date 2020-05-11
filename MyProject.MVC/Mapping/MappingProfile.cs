@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MyProject.Domain.Entities;
+using MyProject.MVC.Models.Forum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,8 @@ namespace MyProject.MVC.Mapping
     {
         public MappingProfile()
         {
-            //CreateMap<Forum, ForumViewModel>();
-            //CreateMap<Forum, ForumViewModel>().ReverseMap();
+            CreateMap<Forum, ForumViewModel>();
+            CreateMap<Forum, ForumViewModel>().ReverseMap();
         }
     }
 }

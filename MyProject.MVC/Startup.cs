@@ -17,7 +17,7 @@ using MyProject.Domain.Interfaces.Core;
 using MyProject.Domain.Entities;
 using MyProject.Repositories;
 using MyProject.Services;
-using Microsoft.AspNetCore.Identity.UI.Services;
+using AutoMapper;
 
 namespace MyProject.MVC
 {
@@ -48,8 +48,7 @@ namespace MyProject.MVC
                   .AddEntityFrameworkStores<ApplicationDbContext>()
                   .AddDefaultTokenProviders();
             services.AddMvc();
-
-
+            services.AddAutoMapper(typeof(Startup));
             #endregion
 
             #region adding dependencies

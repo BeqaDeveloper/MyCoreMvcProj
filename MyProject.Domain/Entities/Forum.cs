@@ -13,6 +13,6 @@ namespace MyProject.Domain.Entities
         public string ImageUrl { get; set; }
 
         //For lazy-loading .
-        public virtual IEnumerable<Post> Posts{ get; set; }
+        public virtual ICollection<Post> Posts{ get; set; }
     }
 }

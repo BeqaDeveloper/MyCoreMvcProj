@@ -6,18 +6,27 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MyProject.Domain.Interfaces;
+using MyProject.MVC.Models.Forum;
 
 namespace MyProject.MVC.Controllers
 {
     public class ForumController : Controller
     {
-        private readonly ILogger _logger;
         private readonly IMapper _mapper;
-        private readonly IForumService forumService;
+        private readonly IForumService _forumService;
+
+        public ForumController( IMapper mapper, IForumService forumService)
+        {
+            _mapper = mapper;
+            _forumService = forumService;
+        }
 
         public IActionResult Index()
         {
-            return View();
+            var forumList = _forumService.Set().ToList();
+            var forumListViewModel = new ForumListViewModel();
+            _mapper.Map(forumList, forumListViewModel.ForumList);
+            return View(forumListViewModel);
         }
     }
 }
