@@ -38,7 +38,7 @@ namespace MyProject.MVC
             services.AddRazorPages();
             services.AddRazorPages().AddRazorRuntimeCompilation();
 
-            #region Addins DBContexts
+            #region Adding DBContexts
             services.AddDbContext<MyDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("ApplicationDbContextConnection")));
             services.AddScoped<IUnitOfWork, MyDbContext>();
             services.AddDbContext<ApplicationDbContext>(options =>
