@@ -16,6 +16,12 @@ namespace MyProject.Domain.Interfaces
     public interface IForumService : IService<Forum>
     {
     }
- 
+    public interface IPostService : IService<Post>
+    {
+    }
+    public interface IPostReplyService : IService<PostReply>
+    {
+    }
+   
 
 }

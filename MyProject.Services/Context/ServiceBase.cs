@@ -55,5 +55,11 @@ namespace MyProject.Repository.Context
         public interface IForumService : IService<Forum>
         {
         }
+        public interface IPostReplyService : IService<PostReply>
+        {
+        }
+        public interface IPostService : IService<Post>
+        {
+        }
     }
 }

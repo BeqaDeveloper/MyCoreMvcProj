@@ -11,4 +11,13 @@ namespace MyProject.Repositories
     {
         public ForumRepository(IUnitOfWork context) : base(context) { }
     }
+    public class PostRepository : RepositoryBase<Post>, IPostRepository
+    {
+        public PostRepository(IUnitOfWork context) : base(context) { }
+    }
+    public class PostReplyRepository : RepositoryBase<PostReply>, IPostReplyRepository
+    {
+        public PostReplyRepository(IUnitOfWork context) : base(context) { }
+    }
+
 }

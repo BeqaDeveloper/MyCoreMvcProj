@@ -18,5 +18,14 @@ namespace MyProject.Domain.Interfaces
     {
 
     }
-  
+    public interface IPostReplyRepository : IRepository<PostReply>
+    {
+
+    }
+    public interface IPostRepository : IRepository<Post>
+    {
+
+    }
+   
+
 }
