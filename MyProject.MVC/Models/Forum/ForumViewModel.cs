@@ -25,7 +25,6 @@ namespace MyProject.MVC.Models.Forum
         public string ImageUrl { get; set; }
 
         public List<SelectListItem> Posts { get; set; }
-        public List<SelectListItem> User { get; set; }
 
     }
     public class ForumListViewModel

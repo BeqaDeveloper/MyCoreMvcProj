@@ -19,6 +19,7 @@ namespace MyProject.Domain.Interfaces
     }
     public interface IPostService : IService<Post>
     {
+        ICollection<Post> GetPostsByForum(long forumId);
     }
     public interface IPostReplyService : IService<PostReply>
     {

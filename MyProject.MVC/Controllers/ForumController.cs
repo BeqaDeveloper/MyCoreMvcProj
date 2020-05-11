@@ -14,6 +14,7 @@ namespace MyProject.MVC.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IForumService _forumService;
+        private readonly IPostService _postService;
 
         public ForumController( IMapper mapper, IForumService forumService)
         {
@@ -32,8 +33,8 @@ namespace MyProject.MVC.Controllers
 
         public IActionResult Topic(int id)
         {
-            var topic = _forumService.GetForumWithPostAndUser(id);
-            return View();
+            var posts = _postService.Set().ToList();
+            return View(posts);
         }
     }
 }

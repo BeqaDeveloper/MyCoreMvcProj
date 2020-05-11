@@ -1,0 +1,47 @@
+﻿@model MyProject.MVC.Models.Post.PostListViewModel
+
+
+
+<table class="table table-bordered table-hover">
+
+
+    <tbody>
+        @foreach (var post in Model.PostList)
+        {
+            @if (Model.PostList.Any())
+            {
+                <tr>
+                    <td>
+                        @post.Title
+                    </td>
+                    <td>
+                        @post.content
+                    </td>
+                    <td>
+                        @post.Created
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td>
+
+                        <div class="noPosts">
+                            <h3>
+                                It looks like there are no Posts. <br />
+                                Why not
+                                <a asp-controller="Post" asp-action="Create" asp-route-id="@post.Id"><span>Create</span></a>
+                                one?
+                            </h3>
+                        </div>
+
+                    </td>
+
+                </tr>
+            }
+        }
+    </tbody>
+    }
+</table>
+

@@ -11,34 +11,23 @@ namespace MyProject.MVC.Models.Post
     {
         [Display(Name = "Id")]
         public long Id { get; set; }
-
         [Display(Name = "Post Title")]
-        public string  Title { get; set; }
+        public string Title { get; set; }
+        [Display(Name = "Content")]
+        public string content { get; set; }
+        [Display(Name = "Created Date")]
+        public DateTime Created { get; set; }
 
-        [Display(Name = "Author Name")]
-        public string AuthorName { get; set; }
+        public List<SelectListItem> Replies { get; set; }
+    }
 
-        [Display(Name = "AuthorRating")]
-        public long AuthorRating { get; set; }
+    public class PostListViewModel
+    {
 
-        public string AuthorId { get; set; }
-
-        [Display(Name = "Data Posted")]
-        public string DatePosted { get; set; }
-
-        public List<SelectListItem> Forum { get; set; }
-        public List<SelectListItem> PostReply { get; set; }
-
-
-        public class PostListViewModel
+        public PostListViewModel()
         {
-
-            public PostListViewModel()
-            {
-                PostList = new List<PostViewModel>();
-            }
-
-            public List<PostViewModel> PostList { get; set; }
+            PostList = new List<PostViewModel>();
         }
+        public List<PostViewModel> PostList { get; set; }
     }
 }

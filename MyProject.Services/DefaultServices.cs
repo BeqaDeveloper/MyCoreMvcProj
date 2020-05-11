@@ -33,6 +33,10 @@ namespace MyProject.Services
         {
             _PostRepository = PostRepository;
         }
+        public ICollection<Post> GetPostsByForum(long forumId)
+        {
+            return _PostRepository.GetPostsByForum(forumId);
+        }
     }
 
     public class PostReplyService : ServiceBase<PostReply, IPostReplyRepository>, IPostReplyService

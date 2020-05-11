@@ -18,14 +18,15 @@ namespace MyProject.Domain.Interfaces
     {
         List<Forum> GetForumWithPostAndUser(long forumId);
     }
-    public interface IPostReplyRepository : IRepository<PostReply>
-    {
-
-    }
     public interface IPostRepository : IRepository<Post>
     {
-
+        List<Post> GetPostsByForum(long forumId);
     }
+    public interface IPostReplyRepository : IRepository<PostReply>
+    {
+       
+    }
+    
    
 
 }

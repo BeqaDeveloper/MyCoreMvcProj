@@ -23,12 +23,18 @@ namespace MyProject.Repositories
                 .Where(x => x.Id == forumId)
                 .ToList();
         }
-
-
         public ForumRepository(IUnitOfWork context) : base(context) { }
     }
     public class PostRepository : RepositoryBase<Post>, IPostRepository
     {
+        public List<Post> GetPostsByForum(long forumId)
+        {
+            return (this._context as MyDbContext).Posts
+                .Include(x => x.Forum)
+                .AsQueryable()
+                .Where(x => x.Forum.Id == forumId)
+                .ToList();
+        }
         public PostRepository(IUnitOfWork context) : base(context) { }
     }
     public class PostReplyRepository : RepositoryBase<PostReply>, IPostReplyRepository
