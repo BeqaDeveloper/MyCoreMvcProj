@@ -22,6 +22,10 @@ namespace MyProject.MVC.Controllers
             _forumService = forumService;
         }
 
+        /// <summary>
+        /// ფორუმების წამოღება ბაზიდან.
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             var forumList = _forumService.Set().ToList();
